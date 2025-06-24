@@ -1,0 +1,568 @@
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerimaan Peserta Didik Baru SMA IT An-NaaFi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #331ca5, #4A90E2);
+            margin: 10px;
+            padding: 15px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        header h1 {
+            color: #FFFFFF;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+        .menu-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #2e86ea;
+            color: #ffffff;
+            border: 2px solid #1e85ecf2;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        button:hover {
+            background-color: #0077ff;
+            color: white;
+        }
+        main {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 18px;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        h2 {
+            color: #17278c;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 8px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 96%;
+            padding: 10px;
+            border: 1px solid #CCCCCC;
+            border-radius: 5px;
+        }
+        .form-group input[type="file"] {
+            padding: 5px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        .btn {
+            padding: 5px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .btn-primary {
+            background-color: #4A90E2;
+            color: #FFFFFF;
+        }
+        .btn-primary:hover {
+            background-color: #357ABD;
+        }
+        .btn-accept {
+            background-color: #28a745;
+            color: #FFFFFF;
+        }
+        .btn-accept:hover {
+            background-color: #218838;
+        }
+        .btn-reject {
+            background-color: #dc3545;
+            color: #FFFFFF;
+        }
+        .btn-reject:hover {
+            background-color: #c82333;
+        }
+        table {
+            padding: auto;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 5px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #CCCCCC;
+            text-align: left;
+        }
+        th {
+            background-color: #4A90E2;
+            color: #FFFFFF;
+        }
+        @media (max-width: 600px) {
+            .menu-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Penerimaan Peserta Didik Baru SMA IT An-NaaFi</h1>
+    <div class="menu-buttons">
+        <button id="btn-beranda">Beranda</button>
+        <button id="btn-pendaftaran">Formulir Pendaftaran</button>
+        <button id="btn-login">Admin</button>
+        <button id="btn-pengumuman">Pengumuman</button>
+    </div>
+</header>
+
+<main>
+    <section id="beranda" class="active">
+        <h2>Selamat Datang di Sistem PPDB SMA IT An-NaaFi</h2>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="profil">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-info">
+                            <div class="panel-heading" style="background-color: #5218f3fa; color: white; text-align: center; font-size: 25px; text-transform: uppercase;">
+                                <strong>Identitas Sekolah</strong>
+                            </div>
+                            <div class="panel-body" style="background-color: #bdd2eb48; border-radius: 5px; padding: 10px 20px;">
+                                <ul style="list-style-type: none; padding: 10px;">
+                                    <li style="margin-bottom: 10px;">
+                                        <strong>NPSN :</strong> <span style="color: #333;">70028128</span>
+                                    </li>
+                                    <li style="margin-bottom: 10px;">
+                                        <strong>Status :</strong> <span style="color: #333;">Swasta</span>
+                                    </li>
+                                    <li style="margin-bottom: 10px;">
+                                        <strong>Bentuk Pendidikan :</strong> <span style="color: #333;">SMA</span>
+                                    </li>
+                                    <li style="margin-bottom: 10px;">
+                                        <strong>Status Kepemilikan :</strong> <span style="color: #333;">Yayasan</span>
+                                    </li>
+                                    <li style="margin-bottom: 10px;">
+                                        <strong>SK Pendirian Sekolah :</strong> <span style="color: #333;">11/011050/DPMPTSP/III/2022</span>
+                                    </li>
+                                    <li style="margin-bottom: 10px;">
+                                        <strong>Tanggal SK Pendirian :</strong> <span style="color: #333;">2022-03-16</span>
+                                    </li>
+                                    <li style="margin-bottom: 10px;">
+                                        <strong>SK Izin Operasional :</strong> <span style="color: #333;">11/011050/DPMPTSP/III/2022</span>
+                                    </li>
+                                    <li style="margin-bottom: 10px;">
+                                        <strong>Tanggal SK Izin Operasional :</strong> <span style="color: #333;">2022-03-16</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="panel-heading" style="background-color: #5218f3fa; color: white; text-align: center; font-size: 25px; text-transform: uppercase;">
+                                <strong>VISI MISI</strong>
+                            </div>
+                            <div class="panel-body" style="background-color: #bdd2eb48; border-radius: 5px; padding: 10px 20px;">
+    <h4>A. Visi SMA IT Al Hikmah</h4>
+    <p style="color: #333;">Berdasarkan analisis konteks, SMA IT Al Hikmah menetapkan visi berikut: 
+    “Mengembangkan Sekolah Bermutu yang Bernafaskan Islam dan Melahirkan Generasi Rabbani”</p>
+
+    <h4>B. Misi SMA IT Al Hikmah</h4>
+    <p style="color: #333;">Untuk mencapai visi tersebut, SMA IT Al Hikmah mengembangkan misi sebagai berikut:</p>
+    <ol style="color: #333;">
+ <ol>
+    <li><strong>Sekolah Bermutu</strong>
+        <ul>
+            <li>Menciptakan iklim dan budaya Islami</li>
+            <li>Mewujudkan 8 Standar Nasional Pendidikan</li>
+            <li>Sistem manajemen yang profesional:
+                <ul>
+                    <li>Struktur Organisasi yang efektif dan efisien</li>
+                    <li>Berbasis pada sistem/regulasi/peraturan</li>
+                    <li>Memberikan pelayanan yang optimal serta transparan</li>
+                    <li>PTK yang solid, produktif, dan tangguh</li>
+                    <li>Berdikari/mandiri secara finansial</li>
+                    <li>Sarana dan prasarana/infrastruktur</li>
+                    <li>Memiliki inovasi/diferensiasi</li>
+                    <li>Memiliki jaringan yang luas (lembaga pendidikan, pemerintah, swasta, investor, dll)</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><strong>Generasi Rabbani</strong>
+        <ul>
+            <li>Aqidah dan Ibadah</li>
+            <li>Adab/Karakter/Akhlak/Softskill</li>
+            <li>Bakat (seni/olahraga)/Keterampilan/Hardskill</li>
+            <li>Sehat</li>
+            <li>Cerdas (Akademik/Keilmuan dan Wawasan Luas)</li>
+        </ul>
+    </li>
+</ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pendaftaran">
+        <h2>Formulir Pendaftaran Siswa Baru</h2>
+        <form id="formPendaftaran">
+            <div class="form-group">
+                <label for="nisn">NISN</label>
+                <input type="number" placeholder="masukkan NISN... (hanya angka)" id="nisn" name="nisn" required />
+            </div>
+            <div class="form-group">
+                <label for="fullname">Nama Lengkap</label>  
+                <input type="text" placeholder="masukkan nama lengkap..." style="text-transform: uppercase;" id="fullname" name="fullname" required /> 
+            </div>
+            <div class="form-group">
+                <label for="tempat_lahir">Tempat Lahir</label>
+                <input type="text" placeholder="masukkan tempat lahir..." style="text-transform: uppercase;"  id="tempat_lahir" name="tempat_lahir" required />
+            </div>
+            <div class="form-group">
+                <label for="tanggal_lahir">Tanggal Lahir</label>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" required />
+            </div>
+            <div class="form-group">
+                <label for="nama_ortu">Nama Orang Tua</label>
+                <input type="text" placeholder="masukkan nama orang tua..." style="text-transform: uppercase;" id="nama_ortu" name="nama_ortu" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" placeholder="masukkan email... (nama@mail.com)" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+                <label for="address">Alamat</label>
+                <textarea id="address" placeholder="masukkan alamat..." style="text-transform: uppercase;" name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="phone">No HP</label>
+                <input type="number" placeholder="No. Hp kamu... (hanya angka)" id="phone" name="phone" required />
+            </div>
+            <div class="form-group">
+                <label for="gender">Jenis Kelamin</label>
+                <select id="gender" name="gender" required>
+                    <option value="L">Laki-laki</option>
+                    <option value="P">Perempuan</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="religion">Agama</label>
+                <select id="religion" name="religion" required>
+                    <option value="Islam">Islam</option>
+                    <option value="Kristen">Kristen</option>
+                    <option value="Protestan">Protestan</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Buddha">Buddha</option>
+                    <option value="Konghucu">Konghucu</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Unggah Dokumen</label>
+                <div>
+                    <label for="ijazah">Ijazah</label>
+                    <input type="file" id="ijazah" name="ijazah" accept=".pdf,.jpg,.jpeg" required />
+                </div>
+                <div>
+                    <label for="kk">Kartu Keluarga</label>
+                    <input type="file" id="kk" name="kk" accept=".pdf,.jpg,.jpeg" required />
+                </div>
+                <div>
+                    <label for="pasfoto">Pas Foto</label>
+                    <input type="file" id="pasfoto" name="pasfoto" accept=".jpg,.jpeg,.png" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="average_report">Nilai Rata-rata Raport</label>
+                <input type="number" placeholder="1-99.9 (gunakan titik untuk desimal)" id="average_report" name="average_report" step="0.01" min="0" max="100" required />
+            </div>
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">Daftar</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="login-admin">
+        <h2>Login Admin</h2>
+        <form id="formLoginAdmin">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" placeholder="masukkan username admin..." id="username" name="username" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" placeholder="**********" id="password" name="password" required />
+            </div>
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="hasil_pengumuman">
+        <h2>PENGUMUMAN HASIL PENERIMAAN SISWA BARU SMA IT AN-NAFI</h2>
+        <input type="text" id="searchPendaftar" placeholder="Cari nama peserta..." style="width: 97%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #CCCCCC;" />
+         <div style="overflow-x: auto;">
+        <table id="tablePendaftar">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>NISN</th>
+                    <th>Nama Siswa</th>
+                    <th>Nilai Rata-rata</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        </div>
+    </section>
+
+<section id="admin-dashboard" class="card">
+    <h2>Dashboard Admin</h2>
+    <button id="exportExcel" class="btn btn-primary">Export to Excel</button>
+    <div class="table-wrapper" style="overflow-x: auto;">
+    <table id="adminTable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>NISN</th>
+                    <th>Nama Siswa</th>
+                    <th>Nilai Rata-rata</th>
+                    <th>Status</th>
+                    <th>Dokumen</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</section>
+</main>
+
+<script>
+    const btnBeranda = document.getElementById('btn-beranda');
+    const btnPendaftaran = document.getElementById('btn-pendaftaran');
+    const btnLogin = document.getElementById('btn-login');
+    const btnPengumuman = document.getElementById('btn-pengumuman');
+    const sections = document.querySelectorAll('section');
+    const adminDashboard = document.getElementById('admin-dashboard');
+    const loginAdminSection = document.getElementById('login-admin');
+
+    function showSection(id) {
+        sections.forEach(sec => {
+            sec.classList.toggle('active', sec.id === id);
+            if (sec.id === id) {
+                sec.style.display = 'block';
+            } else {
+                sec.style.display = 'none';
+            }
+        });
+    }
+
+    btnBeranda.addEventListener('click', () => showSection('beranda'));
+    btnPendaftaran.addEventListener('click', () => showSection('pendaftaran'));
+    btnLogin.addEventListener('click', () => showSection('login-admin'));
+    btnPengumuman.addEventListener('click', () => {
+        showSection('hasil_pengumuman');
+        loadPengumuman();
+    });
+
+    const pendaftarList = [];
+
+    document.getElementById('formLoginAdmin').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const password = e.target.password.value;
+
+        const adminUsername = 'admibagas';
+        const adminPassword = 'admin123';
+
+        if (password === adminPassword) {
+            alert('Login berhasil, Anda adalah admin');
+            showAdminDashboard();
+        } else {
+            alert('user atau Password anda salah!');
+        }
+    });
+
+   function showAdminDashboard() {
+    loginAdminSection.style.display = 'none';
+    adminDashboard.style.display = 'block';
+    loadAdminData();
+}
+
+    function loadAdminData() {
+        const tbody = document.querySelector('#adminTable tbody');
+        tbody.innerHTML = '';
+
+        pendaftarList.forEach((p, index) => {
+            const avgNilai = (p.average_report).toFixed(2);
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${p.nisn}</td>
+                <td>${p.name}</td>
+                <td>${avgNilai}</td>
+                <td>${p.status}</td>
+                <td>
+                    <a href="#" onclick="viewDocuments(${index})">Lihat Dokumen</a>
+                </td>
+                <td>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn btn-accept" onclick="verifyStudent(${index}, 'Diterima')">Diterima</button>
+                        <button class="btn btn-reject" onclick="verifyStudent(${index}, 'Tidak Diterima')">Ditolak</button>
+                    </div>
+                </td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    function viewDocuments(index) {
+        const student = pendaftarList[index];
+        alert(`Dokumen untuk ${student.name}:\nIjazah: ${student.documents.ijazah}\nKartu Keluarga: ${student.documents.kk}\nPas Foto: ${student.documents.pasfoto}`);
+    }
+
+    function verifyStudent(index, status) {
+        const student = pendaftarList[index];
+        student.status = status;
+        loadAdminData();
+        loadPengumuman();
+    }
+
+   document.getElementById('exportExcel').addEventListener('click', () => {
+    let csvContent = "data:text/csv;charset=utf-8,";
+    csvContent += "No|NISN|Nama Siswa|Tempat Lahir|Tanggal Lahir|Nama Orang Tua|Jenis Kelamin|Agama|No. HP|Email|Alamat|Nilai Rata-rata|Status\n";
+
+    pendaftarList.forEach((p, index) => {
+        const avgNilai = (p.average_report).toFixed(2);
+
+
+        let nisnWithQuote = p.nisn;
+        if (nisnWithQuote.startsWith('0')) {
+            nisnWithQuote = "'" + nisnWithQuote;
+        }
+        let phoneWithQuote = p.phone;
+        if (phoneWithQuote.startsWith('0')) {
+            phoneWithQuote = "'" + phoneWithQuote;
+        }
+
+        csvContent += `${index + 1}|${nisnWithQuote }|${p.name}|${p.place_birth}|${p.date_birth}|${p.name_ortu}|${p.gender}|${p.religion}|${phoneWithQuote}|${p.email}|${p.address}|${avgNilai}|${p.status}\n`;
+    });
+
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "data_pendaftar.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
+
+
+        function loadPengumuman() {
+        const tbody = document.querySelector('#tablePendaftar tbody');
+        tbody.innerHTML = '';
+
+        pendaftarList.forEach((p, i) => {
+            if (p.status !== '') {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${i + 1}</td>
+                    <td>${p.nisn}</td>
+                    <td>${p.name}</td>
+                    <td>${p.average_report.toFixed(2)}</td>
+                    <td>${p.status}</td>
+                `;
+                tbody.appendChild(tr);
+            }
+        });
+    }
+
+    document.getElementById('searchPendaftar').addEventListener('input', e => {
+        const query = e.target.value.toLowerCase();
+        const rows = document.querySelectorAll('#tablePendaftar tbody tr');
+        rows.forEach(row => {
+            const name = row.cells[2].textContent.toLowerCase();
+            row.style.display = name.includes(query) ? '' : 'none';
+        });
+    });
+
+    document.getElementById('formPendaftaran').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+
+        const pendaftar = {
+            nisn: formData.get('nisn'),
+            name: formData.get('fullname'),
+            place_birth: formData.get('tempat_lahir'),
+            date_birth: formData.get('tanggal_lahir'),
+            name_ortu: formData.get('nama_ortu'),
+            email: formData.get('email'),
+            address: formData.get('address'),
+            phone: formData.get('phone'),
+            gender: formData.get('gender'),
+            religion: formData.get('religion'),
+            average_report: parseFloat(formData.get('average_report')),
+            status: 'Menunggu Verifikasi',
+            documents: {
+                ijazah: formData.get('ijazah').name,
+                kk: formData.get('kk').name,
+                pasfoto: formData.get('pasfoto').name,
+            }
+        };
+
+        pendaftarList.push(pendaftar);
+
+        alert('anda berhasil mendaftar, selanjutnya cek secara berkala status anda pada halaman pengumuman');
+
+        this.reset();
+
+        showSection('beranda');
+    });
+</script>
+
+<div style="text-align: center; color: #ffffff8e;">
+    <p>Gunung Calincing, Kuripan, Ciseeng, Bogor, Jawa Barat. (16120) | Email : Smait.Annaafi@gmail.com</p>
+</div>
+<div style="position: fixed; bottom: 10px; right: 10px; text-align: right; color: #00000034; font-size: 15px;">
+    <i>BADIMUK&copy;</i>
+    <div style="font-size: 10px;">
+        <i>Bagas Aditya Mukti</i>
+    </div>
+</div>
+
+
+</body>
+</html>
